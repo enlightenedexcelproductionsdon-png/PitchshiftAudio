@@ -1,0 +1,41 @@
+# Granular Pitch Shifting Parameters
+
+.semitones {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.grain-size {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.overlap {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.import-media {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 2px;
+    cursor: pointer;
+}
+
+.video-export {
+    background-color: #008CBA; /* Blue */
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 2px;
+    cursor: pointer;
+}

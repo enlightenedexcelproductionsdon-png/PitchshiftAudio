@@ -1,0 +1,51 @@
+# Granular Pitch Shifting with Vue.js and Next.js
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Granular Pitch Shifting</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>Granular Pitch Shifting</h1>
+        <input type="file" @change="importMedia" accept="audio/*">
+        <div>
+            <label for="semitones">Semitones:</label>
+            <input type="number" v-model="semitones" id="semitones">
+        </div>
+        <div>
+            <label for="grainSize">Grain Size (ms):</label>
+            <input type="number" v-model="grainSize" id="grainSize">
+        </div>
+        <div>
+            <label for="overlap">Overlap (%):</label>
+            <input type="number" v-model="overlap" id="overlap">
+        </div>
+        <button @click="exportVideo">Export Video</button>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                semitones: 0,
+                grainSize: 100,
+                overlap: 50,
+                audioFile: null
+            },
+            methods: {
+                importMedia(event) {
+                    this.audioFile = event.target.files[0];
+                },
+                exportVideo() {
+                    // Video export logic here
+                    console.log(`Exporting video with ${this.semitones} semitones, ${this.grainSize} ms grain size, and ${this.overlap}% overlap.`);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
